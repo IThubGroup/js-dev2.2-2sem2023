@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="script.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1</title>
+</head>
+<body>
+    <!-- <script src="script.js">
+        console.log("Hello Bear");
+    </script> -->
+    <h1>Lesson 1</h1>
+    <!-- 
+        Писать тег script нужно в самом конце тега body?
+
+        Когда код используется при работе с HTML-тегами, его надо писать после отрисовки этих тегов
+
+        Когда код включает в себя функции, классы, сторонние библиотеки и явно не использует html-контент страницы, то его обычно подключают внутри тега head
+    -->
+    <script>
+        console.log(this);
+
+        // this в глобальной области видимости - глобальный объект. В браузере this === window
+        
+        // BOM - Browser Object Model
+        console.log(window.innerHeight);
+        console.log(innerHeight); // 100vh
+        console.log(innerWidth); // 100vw
+
+        // Диалоговые окна
+        let name = prompt("Как тебя зовут?", "Xandar"); // Ввод строки
+        console.log(name);
+        let isVasya = confirm("Ты Вася?");
+        console.log(isVasya);
+
+        // Если ты Вася и твое имя vasya // Vasya vAsya VASYA vasya
+        /*
+            if () {
+                ...
+            } else {
+                ...
+            }
+        */
+        let str = isVasya || name.toLowerCase() === "vasya" ? "Привет красавчик!" : "Давай досвиданья =/";
+        alert(str);
+
+        // я, мое, меня, себе === this 
+    </script>
+</body>
+</html>
